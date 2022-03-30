@@ -1,0 +1,49 @@
+// Variables
+$blue: #4285f4;
+$coral: #ec5863;
+$black: #000000;
+$white: #fff;
+$grey: #616161;
+$light-grey: #b0b0b0;
+$maxWidthContainer: 1920;
+
+// Functions
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
+@function em($px, $base: 16) {
+  @return #{$px / $base}em;
+}
+
+@function prc($px, $needPrc) {
+  @return #{($px * $needPrc) / 100}px;
+}
+
+// Mixins
+@mixin adaptiv-val($property, $currSize, $minSize) {
+  $addSize: $currSize - $minSize;
+  #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+}
+
+@mixin btn($color, $size) {
+  max-width: $size + px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color;
+  padding: 14px 30px;
+  font-size: rem(10);
+  letter-spacing: prc(10, 14);
+  color: $white;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out, background-color 0.1s;
+}
+
+@mixin btn-hover($bc, $color: #{$white}) {
+  background-color: $bc;
+  color: $color;
+  transform: scale(1.1);
+}

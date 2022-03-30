@@ -1,0 +1,19 @@
+@import "./libs/normalize";
+@import "fonts";
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+[class*="__container"] {
+  max-width: 1057px;
+  margin: 0 auto;
+}
+
+@import "./blocks/header_and_first";
+@import "./blocks/humburger";
+@import "./blocks/stay-safe";
+@import "./blocks/_talk-experts";
+@import "./blocks/healthcare";
+
+@import "./media";

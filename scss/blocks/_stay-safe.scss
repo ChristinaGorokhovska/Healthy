@@ -1,0 +1,81 @@
+@import "../settings";
+
+.stay-safe {
+  margin: 127px 0 132px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img-block {
+    position: relative;
+    width: 50%;
+    padding-left: 40px;
+    margin-left: 48px;
+  }
+
+  &__img {
+    z-index: 1000;
+    width: 100%;
+  }
+
+  &__decorate {
+    position: absolute;
+    background-color: $coral;
+    border-radius: 30px;
+  }
+
+  .item1 {
+    width: 147px;
+    height: 147px;
+    top: -25px;
+    left: 0;
+    z-index: -1;
+  }
+
+  .item2 {
+    width: 77px;
+    height: 77px;
+    z-index: -2;
+    right: 182px;
+    bottom: 122px;
+  }
+  .item3 {
+    width: 77px;
+    height: 77px;
+    z-index: -3;
+    bottom: 0;
+    left: 35px;
+  }
+
+  &__text-block {
+    width: 50%;
+  }
+
+  &__title {
+    span {
+      color: $coral;
+    }
+    font-size: rem(44);
+    font-weight: 700;
+    line-height: 1.26;
+    margin: 0 0 em(12, 44);
+  }
+  &__text {
+    font-size: 12px;
+    color: $grey;
+    font-weight: 400;
+    max-width: 375px;
+    margin: 0 0 em(24, 12);
+    letter-spacing: prc(12, 8);
+  }
+
+  &__btn {
+    @include btn($coral, 144);
+
+    &:hover {
+      @include btn-hover($blue);
+    }
+  }
+}

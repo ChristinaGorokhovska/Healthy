@@ -1,0 +1,222 @@
+@import "./settings";
+
+@media screen and (max-width: 1060px) {
+  [class*="__container"] {
+    padding: 0 15px;
+  }
+  .take-care__container::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .healthcare__item-block .card3::after {
+    display: none;
+  }
+  .talk-experts__decorate {
+    display: none;
+  }
+
+  .healthcare__item-block .card1::before,
+  .card1::after,
+  .card2::after,
+  .card3 ::after {
+    display: none;
+  }
+
+  .header {
+    &__button {
+      flex: 0 0 auto;
+      margin-left: 30px;
+    }
+    &__menu-item {
+      gap: 20px;
+    }
+  }
+
+  .take-care__container::before {
+    display: none;
+  }
+
+  .healthcare {
+    &__card {
+      border: 1px solid $light-grey;
+    }
+  }
+  .talk-experts {
+    &__statistic {
+      border: 1px solid $light-grey;
+    }
+  }
+}
+@media screen and (max-width: 728px) {
+  .header {
+    & .menu__item {
+      margin-right: 15px;
+    }
+  }
+
+  .stay-safe {
+    &__img-block {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .item2 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  [class*="__container"] {
+    h1 {
+      font-size: rem(33);
+    }
+    h2 {
+      font-size: rem(33);
+      text-align: center;
+      line-height: prc(33, 126);
+    }
+  }
+
+  .header {
+    &__container {
+      justify-content: space-between;
+    }
+
+    &__btn-block {
+      display: none;
+    }
+  }
+
+  .take-care {
+    &__container {
+      flex-direction: column;
+    }
+    &__text-block {
+      width: 100%;
+    }
+    &__doctor-block {
+      width: 100%;
+      margin-top: 36px;
+      padding: 0;
+    }
+    &__play-block {
+      width: 100%;
+    }
+  }
+
+  .stay-safe {
+    margin-bottom: 124px;
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__text-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__decorate {
+      display: none;
+    }
+
+    &__img-block {
+      margin-top: 36px;
+    }
+
+    &__img {
+      box-shadow: 23px 30px 48px -5px $light-grey;
+      border-radius: 16px;
+    }
+  }
+
+  .talk-experts {
+    &__container {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    &__statistic-block {
+      margin-bottom: 36px;
+    }
+
+    &__statistic {
+      width: auto;
+      flex-direction: column;
+      row-gap: 15px;
+      border: 1px solid $light-grey;
+      border-radius: 16px;
+    }
+
+    &__text-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__video-block {
+      margin: 36px 0 124px 0;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .healthcare {
+    &__container {
+      margin-bottom: 56px;
+    }
+
+    &__text-block {
+      text-align: center;
+    }
+
+    &__text {
+      max-width: 375px;
+    }
+
+    &__item-block {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+
+    &__card {
+      width: 70%;
+      border: 1px solid $light-grey;
+      padding: 20px;
+    }
+  }
+
+  .footer {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+
+      a {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  [class*="__container"] {
+    h1 {
+      font-size: rem(28);
+    }
+    h2 {
+      font-size: rem(28);
+      text-align: center;
+      line-height: prc(28, 126);
+    }
+  }
+}
